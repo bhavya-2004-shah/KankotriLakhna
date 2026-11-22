@@ -1,10 +1,12 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { SectionContainer } from '../../layout/SectionContainer';
 import { WelcomeHero } from '../sections/WelcomeHero';
+import { FormalInvitationSection } from '../sections/FormalInvitationSection';
 import { HaldiSection } from '../sections/HaldiSection';
 import { MarriageSection } from '../sections/MarriageSection';
 import { ClosingSection } from '../sections/ClosingSection';
 import { useGSAPAnimations } from '../../hooks/useGSAPAnimations';
+import { ScrollTrigger } from '../../utils/gsapConfig';
 import './ContinuousPathway.css';
 
 /**
@@ -41,12 +43,18 @@ export const ContinuousPathway = ({ invitationData, isEnvelopeOpen }) => {
   const haldiEvent = events?.haldi || (Array.isArray(events) ? events.find((e) => e.id === 'haldi') : null) || {};
   const marriageEvent = events?.marriage || (Array.isArray(events) ? events.find((e) => e.id === 'hastamelap' || e.id === 'marriage') : null) || {};
 
+  useEffect(() => {
+    if (!isEnvelopeOpen) return undefined;
+
+    const refreshFrame = requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+
+    return () => cancelAnimationFrame(refreshFrame);
+  }, [isEnvelopeOpen]);
+
   const handleSaveTheDate = () => {
-    if (haldiRef.current) {
-      haldiRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      document.getElementById('haldi-milestone')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    document.getElementById('formal-invitation')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const handleBackToTop = () => {
@@ -100,6 +108,8 @@ export const ContinuousPathway = ({ invitationData, isEnvelopeOpen }) => {
           onScrollToNext={handleSaveTheDate}
         />
       </SectionContainer>
+
+      <FormalInvitationSection />
 
       {/* ====================================================================
           MILESTONE 2: Haldi Samarambh (Pithi Ceremony)

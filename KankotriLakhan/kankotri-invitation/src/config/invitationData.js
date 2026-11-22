@@ -10,14 +10,14 @@
 export const invitationData = {
   // General Meta & SEO
   meta: {
-    title: 'Wedding Invitation | Viraj & Ananya',
+    title: 'Wedding Invitation | JineshKumar & Prachi',
     subtitle: 'Together with their families, invite you to celebrate their wedding',
-    hashtag: '#VirajWedsAnanya',
+    hashtag: '#JineshKumarWedsPrachi',
     auspiciousSymbol: '|| श्री गणेशाय नमः ||',
-    groomName: 'Viraj',
-    brideName: 'Ananya',
-    groomFullName: 'Viraj Patel',
-    brideFullName: 'Ananya Shah',
+    groomName: 'JineshKumar',
+    brideName: 'Prachi',
+    groomFullName: 'JineshKumar Shah',
+    brideFullName: 'Prachi Shah',
   },
 
   // Traditional Sacred Invocations & Blessings
@@ -42,8 +42,8 @@ export const invitationData = {
   couple: {
     groom: {
       prefix: 'Chi.',
-      name: 'Viraj',
-      fullName: 'Viraj Patel',
+      name: 'JineshKumar',
+      fullName: 'JineshKumar Patel',
       parents: 'Mrs. Hansaben & Mr. Rameshbhai G. Patel',
       grandparents: 'Grandson of Late Manilal C. Patel',
       native: 'Ahmedabad (Native: Unjha, Gujarat)',
@@ -51,8 +51,8 @@ export const invitationData = {
     },
     bride: {
       prefix: 'Chi.Sau.Ka.',
-      name: 'Ananya',
-      fullName: 'Ananya Shah',
+      name: 'Prachi',
+      fullName: 'Prachi Shah',
       parents: 'Mrs. Minaben & Mr. Pravinbhai C. Shah',
       grandparents: 'Granddaughter of Late Chimanlal M. Shah',
       native: 'Vadodara (Native: Patan, Gujarat)',
@@ -158,7 +158,7 @@ export const invitationData = {
       { name: 'Mr. Pravinbhai Shah', phone: '+91 98765 43212' },
     ],
     whatsappNumber: '919876543210',
-    whatsappDefaultMessage: 'Namaste! We are delighted to confirm our attendance for Viraj & Ananya’s wedding celebration.',
+    whatsappDefaultMessage: 'Namaste! We are delighted to confirm our attendance for JineshKumar & Prachi’s wedding celebration.',
   },
 
   // Ambient Audio
@@ -189,6 +189,38 @@ export const coverHeroConfig = {
     invocation: '|| श्री गणेशाय नमः ||',
     eyebrow: 'TOGETHER WITH OUR FAMILIES',
     ctaLabel: 'SAVE THE DATE',
+  },
+};
+
+export const formalInvitationConfig = {
+  assets: {
+    sectionBackdrop: '/assets/invitation/invitation-section-bg.png',
+    archFrame: '/assets/invitation/invitation-arch-frame.png',
+  },
+  content: {
+    shlokaLines: [
+      'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।',
+      'निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥',
+    ],
+    blessingLead: 'With the blessings of the divine',
+    inviteLine: 'we request the honour of your presence\nat the wedding celebration of',
+    bride: {
+      name: invitationData.couple.bride.name,
+      lineage: `D/O ${invitationData.couple.bride.parents}`,
+    },
+    groom: {
+      name: invitationData.couple.groom.name,
+      lineage: `S/O ${invitationData.couple.groom.parents}`,
+    },
+    dateLabel: invitationData.weddingDate.dateDisplay,
+    timeLabel: invitationData.weddingDate.shubhMuhuratTime,
+    venueLabel: `${invitationData.venue.name}, ${invitationData.venue.address}`,
+    mapUrl: invitationData.venue.googleMapsUrl,
+    mapButtonLabel: 'VIEW ON MAP',
+  },
+  eventsHeader: {
+    title: 'Our Events',
+    subtitle: 'A celebration journey, in five ceremonies',
   },
 };
 

@@ -1,0 +1,36 @@
+.ornate-arch-card {
+  position: relative;
+  width: min(100%, 540px);
+  margin-inline: auto;
+  aspect-ratio: 3 / 4;
+  box-sizing: border-box;
+}
+
+.ornate-arch-card__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.ornate-arch-card__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .ornate-arch-card {
+    min-height: 620px;
+  }
+}

@@ -66,7 +66,7 @@ export const WelcomeHero = ({ isOpened, onScrollToNext }) => {
           type="button"
           className="welcome-hero__chevron"
           onClick={onScrollToNext}
-          aria-label="Scroll to the Haldi ceremony"
+          aria-label="Scroll to the formal wedding invitation"
         >
           <span />
         </button>

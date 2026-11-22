@@ -6,3 +6,4 @@ export { FloralBorder } from './FloralBorder';
 export { FloatingPetals } from './FloatingPetals';
 export { GaneshBlessing } from './GaneshBlessing';
 export { ScrollToTop } from './ScrollToTop';
+export { OrnateArchCard } from './OrnateArchCard';
