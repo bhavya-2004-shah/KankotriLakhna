@@ -1,0 +1,261 @@
+/* ==========================================================================
+   HaldiSection Styles - Turmeric & Marigold Celebration
+   ========================================================================== */
+
+.haldi-scene-card {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-card-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 252, 240, 0.95) 0%,
+    rgba(255, 248, 225, 0.98) 50%,
+    rgba(255, 252, 240, 0.95) 100%
+  );
+  border: 1.5px solid rgba(220, 165, 45, 0.55);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+  box-shadow: 0 12px 36px rgba(184, 138, 34, 0.16), 0 0 24px rgba(255, 192, 0, 0.12);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.haldi-scene-card::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px dashed rgba(212, 175, 55, 0.4);
+  border-radius: calc(var(--radius-xl) - 4px);
+  pointer-events: none;
+}
+
+/* Marigold Garland Ring */
+.haldi-marigold-ring {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  z-index: 2;
+}
+
+.flower-drop {
+  font-size: 1.25rem;
+  filter: drop-shadow(0 2px 4px rgba(255, 128, 8, 0.25));
+  animation: gentleBob 3s ease-in-out infinite alternate;
+}
+
+.flower-drop.f-2 { animation-delay: 0.3s; }
+.flower-drop.f-3 { animation-delay: 0.6s; }
+.flower-drop.f-4 { animation-delay: 0.9s; }
+.flower-drop.f-5 { animation-delay: 1.2s; }
+
+@keyframes gentleBob {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
+/* Urli Artwork */
+.haldi-urli-artwork {
+  width: 100%;
+  max-width: 220px;
+  margin: var(--space-xs) auto var(--space-md);
+  z-index: 2;
+}
+
+.urli-svg-art {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Haldi Titles */
+.haldi-main-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-text-maroon);
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+  z-index: 2;
+}
+
+.haldi-sub-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-antique-gold-dark);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  z-index: 2;
+}
+
+.haldi-verse {
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 580px;
+  margin: 0 auto var(--space-md);
+  color: var(--color-text-primary);
+  border-left: 2px solid var(--color-antique-gold);
+  border-right: 2px solid var(--color-antique-gold);
+  padding: 4px var(--space-md);
+  z-index: 2;
+}
+
+.haldi-theme-note {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  max-width: 540px;
+  margin: 0 auto var(--space-lg);
+  line-height: 1.5;
+  z-index: 2;
+}
+
+/* Details Grid */
+.haldi-details-grid {
+  width: 100%;
+  max-width: 620px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin: 0 auto var(--space-lg);
+  z-index: 2;
+}
+
+.event-detail-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.event-detail-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.detail-icon {
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-antique-gold-dark);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.detail-value {
+  font-size: 0.95rem;
+  color: var(--color-text-maroon);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.detail-address {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* Dress Code Pill */
+.haldi-dresscode-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFF0BA 100%);
+  border: 1px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  padding: 6px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-lg);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+  z-index: 2;
+}
+
+.dresscode-flower {
+  font-size: 1rem;
+}
+
+/* Map Action */
+.haldi-map-action {
+  z-index: 2;
+}
+
+.btn-haldi-map {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #FFFDF8 0%, #F5ECDC 100%);
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  color: var(--color-text-maroon);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(138, 101, 32, 0.15);
+  transition: all 0.25s ease;
+}
+
+.btn-haldi-map:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #FAF4E4 0%, #EBDAB8 100%);
+  border-color: var(--color-gold-dark);
+  box-shadow: 0 6px 18px rgba(138, 101, 32, 0.25);
+}
+
+.btn-haldi-map:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.map-arrow {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .haldi-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .haldi-scene-card {
+    padding: var(--space-lg) var(--space-sm) var(--space-xl);
+  }
+}
+
+@media (max-width: 360px) {
+  .haldi-scene-card {
+    padding: var(--space-md) 6px var(--space-lg);
+  }
+
+  .haldi-main-title {
+    font-size: 1.55rem;
+  }
+
+  .btn-haldi-map {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}

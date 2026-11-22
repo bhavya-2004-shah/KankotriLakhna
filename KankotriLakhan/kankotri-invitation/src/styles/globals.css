@@ -1,0 +1,131 @@
+@import './variables.css';
+@import './animations.css';
+
+/* ==========================================================================
+   CSS Reset & Base Rules
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ==========================================================================
+   Typography Helpers
+   ========================================================================== */
+.font-gujarati {
+  font-family: var(--font-gujarati);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 0.04em;
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.text-gold {
+  color: var(--color-text-gold);
+}
+
+.text-maroon {
+  color: var(--color-primary);
+}
+
+.text-saffron {
+  color: var(--color-saffron);
+}
+
+.gold-gradient-text {
+  background: var(--color-gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Layout & Container Utilities
+   ========================================================================== */
+.invitation-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section-padding {
+  padding: var(--space-3xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ==========================================================================
+   Royal Card & Border Styles
+   ========================================================================== */
+.kankotri-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-royal);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.kankotri-card::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px dashed rgba(212, 175, 55, 0.45);
+  border-radius: calc(var(--radius-lg) - 4px);
+  pointer-events: none;
+}
+
+.corner-ornament {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: var(--color-gold);
+  pointer-events: none;
+}
+
+/* Component Skeleton Placeholders */
+.skeleton-box {
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px dashed var(--color-card-border);
+  text-align: center;
+  margin: var(--space-md) 0;
+}

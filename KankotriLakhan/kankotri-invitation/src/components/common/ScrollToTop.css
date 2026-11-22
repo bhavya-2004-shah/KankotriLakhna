@@ -1,0 +1,57 @@
+/* ==========================================================================
+   ScrollToTop Floating Action Button
+   ========================================================================== */
+.scroll-to-top-fixed {
+  position: fixed;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  z-index: 50;
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.scroll-top-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-antique-gold-gradient);
+  border: 1.5px solid #8A6520;
+  border-radius: 50%;
+  color: #2B1E16;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(138, 101, 32, 0.35);
+  transition: all var(--transition-normal);
+  padding: 0;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(138, 101, 32, 0.5);
+}
+
+.scroll-icon {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.scroll-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+@media (max-width: 420px) {
+  .scroll-to-top-fixed {
+    bottom: var(--space-sm);
+    right: var(--space-sm);
+  }
+  .scroll-top-btn {
+    width: 42px;
+    height: 42px;
+  }
+}

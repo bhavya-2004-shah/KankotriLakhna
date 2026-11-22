@@ -1,0 +1,105 @@
+/* ==========================================================================
+   GSAP & CSS Keyframe Animations for Kankotri Invitation
+   ========================================================================== */
+
+/* Shimmer effect for gold typography, borders and temple arches */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Gentle float effect for floral petals, kalash, and motifs */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+/* Radiant aura pulsation behind Lord Ganesha */
+@keyframes auraPulse {
+  0%, 100% {
+    transform: scale(0.98);
+    opacity: 0.65;
+    filter: drop-shadow(0 0 12px rgba(197, 160, 89, 0.45));
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.7));
+  }
+}
+
+/* Falling & swaying petal animation for pink & white floral rain */
+@keyframes petalFall {
+  0% {
+    transform: translate3d(0, -50px, 0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(var(--drift, 40px), 105vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Subtle glow for sacred diya / auspicious symbols */
+@keyframes diyaFlicker {
+  0%, 100% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 6px rgba(255, 153, 51, 0.7));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(255, 153, 51, 0.95));
+  }
+}
+
+/* Soft royal pulse for Open Invitation button */
+@keyframes royalPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 20px rgba(197, 160, 89, 0.35), 0 0 0 0 rgba(197, 160, 89, 0.5);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(197, 160, 89, 0.5), 0 0 0 10px rgba(197, 160, 89, 0);
+  }
+}
+
+/* Music equalizer bar bouncing */
+@keyframes soundWave {
+  0%, 100% {
+    height: 6px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+.animate-float {
+  animation: gentleFloat 5s ease-in-out infinite;
+}
+
+.animate-aura {
+  animation: auraPulse 4s ease-in-out infinite;
+}
+
+.animate-diya {
+  animation: diyaFlicker 3s ease-in-out infinite;
+}
+
+.animate-pulse-royal {
+  animation: royalPulse 2.5s infinite;
+}

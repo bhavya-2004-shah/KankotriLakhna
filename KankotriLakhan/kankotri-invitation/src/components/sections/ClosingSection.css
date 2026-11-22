@@ -1,0 +1,382 @@
+/* ==========================================================================
+   ClosingSection Styles - Elegant Courtyard Conclusion
+   ========================================================================== */
+
+.closing-scene-card {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-card-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 249, 0.96) 0%,
+    rgba(250, 245, 235, 0.98) 50%,
+    rgba(255, 253, 249, 0.96) 100%
+  );
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+  box-shadow: var(--shadow-temple), 0 0 24px rgba(212, 175, 55, 0.12);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.closing-scene-card::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px dashed rgba(197, 160, 89, 0.45);
+  border-radius: calc(var(--radius-xl) - 4px);
+  pointer-events: none;
+}
+
+/* Courtyard Arch Header */
+.courtyard-arch-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-md);
+  z-index: 2;
+}
+
+.arch-finial-diya {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 8px rgba(255, 119, 0, 0.4));
+}
+
+/* Tahuko Box */
+.closing-tahuko-box {
+  width: 100%;
+  max-width: 580px;
+  background: linear-gradient(135deg, #FFFDF8 0%, #FAF2E3 100%);
+  border: 1px solid var(--color-antique-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-xl);
+  box-shadow: 0 4px 14px rgba(138, 101, 32, 0.08);
+  z-index: 2;
+}
+
+.tahuko-badge {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-maroon);
+  border-bottom: 1px solid var(--color-antique-gold);
+  padding-bottom: 2px;
+  margin-bottom: var(--space-xs);
+}
+
+.tahuko-content {
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+  white-space: pre-line;
+}
+
+.tahuko-signature {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-antique-gold-dark);
+}
+
+/* Hosts Section */
+.closing-hosts-section {
+  width: 100%;
+  max-width: 580px;
+  margin-bottom: var(--space-xl);
+  z-index: 2;
+}
+
+.hosts-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-maroon);
+  margin-bottom: var(--space-sm);
+}
+
+.hosts-names-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.host-name-item {
+  font-size: 0.92rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.hosts-extended-line {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* Venue Summary */
+.closing-venue-summary {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-xl);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  z-index: 2;
+}
+
+.venue-pin-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.venue-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-maroon);
+  margin-bottom: 2px;
+}
+
+.venue-address-line {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
+}
+
+.btn-venue-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #FFFDF8 0%, #F5ECDC 100%);
+  border: 1px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  color: var(--color-text-maroon);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-venue-directions:hover {
+  background: linear-gradient(135deg, #FAF4E4 0%, #EBDAB8 100%);
+  transform: translateY(-1px);
+}
+
+/* RSVP Box */
+.closing-rsvp-box {
+  width: 100%;
+  max-width: 580px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-xl);
+  z-index: 2;
+}
+
+.rsvp-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-maroon);
+  margin-bottom: 4px;
+}
+
+.rsvp-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.rsvp-phone-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.phone-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: #FFFDF9;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.phone-chip:hover {
+  border-color: var(--color-antique-gold);
+  color: var(--color-text-maroon);
+}
+
+.btn-whatsapp-rsvp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: #25D366;
+  color: #FFFFFF;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-whatsapp-rsvp:hover {
+  background: #20BD5A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+}
+
+.wa-icon {
+  font-size: 1.1rem;
+}
+
+/* Base Pots */
+.closing-pots-row {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  justify-content: space-between;
+  margin: -10px 0 var(--space-md);
+  padding: 0 var(--space-md);
+  z-index: 2;
+}
+
+/* Namaskar Seal */
+.closing-namaskar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: var(--space-xl);
+  z-index: 2;
+}
+
+.namaskar-icon {
+  font-size: 2.2rem;
+  color: var(--color-text-maroon);
+}
+
+.namaskar-text {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  max-width: 460px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.namaskar-couple-line {
+  font-size: 2.2rem;
+  color: var(--color-text-maroon);
+  margin-top: 4px;
+}
+
+.namaskar-date-foot {
+  font-size: 0.85rem;
+  color: var(--color-antique-gold-dark);
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* Back to Top Button */
+.closing-back-to-top {
+  z-index: 2;
+}
+
+.btn-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #FFFDF8 0%, #F5ECDC 100%);
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  color: var(--color-text-maroon);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(138, 101, 32, 0.2);
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.btn-back-to-top:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #FAF4E4 0%, #EBDAB8 100%);
+  box-shadow: 0 6px 18px rgba(138, 101, 32, 0.3);
+}
+
+.btn-back-to-top:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.arrow-up {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .courtyard-arch-header {
+    gap: var(--space-sm);
+  }
+
+  .closing-scene-card {
+    padding: var(--space-lg) var(--space-sm) var(--space-xl);
+  }
+}
+
+@media (max-width: 360px) {
+  .closing-scene-card {
+    padding: var(--space-md) 6px var(--space-lg);
+  }
+
+  .closing-tahuko-box,
+  .closing-venue-summary,
+  .closing-rsvp-box {
+    padding: var(--space-sm) 8px;
+  }
+
+  .phone-chip {
+    font-size: 0.76rem;
+    padding: 5px 10px;
+  }
+
+  .btn-whatsapp-rsvp {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}

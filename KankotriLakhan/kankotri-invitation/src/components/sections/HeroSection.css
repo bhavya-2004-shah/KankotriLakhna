@@ -1,0 +1,660 @@
+/* ==========================================================================
+   HeroSection / Welcome Landing Styles
+   Grand Indian Temple Architecture (Ivory, Cream, Antique Gold & Florals)
+   ========================================================================== */
+
+.section-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--color-ivory);
+  background-image: 
+    radial-gradient(ellipse at 50% 20%, rgba(251, 246, 238, 0.9) 0%, rgba(255, 253, 248, 0.98) 70%),
+    radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px;
+  overflow: hidden;
+  padding-bottom: var(--space-3xl);
+}
+
+/* ==========================================================================
+   Temple Architectural Facade & Pillars
+   ========================================================================== */
+.temple-architecture-container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  gap: var(--space-md);
+  padding: 0 var(--space-md);
+  position: relative;
+  z-index: 2;
+  align-items: stretch;
+}
+
+/* Carved Temple Stambha (Pillar) Styles */
+.temple-pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 600px;
+}
+
+.pillar-capital {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.capital-tier.tier-1 {
+  width: 64px;
+  height: 8px;
+  background: var(--color-antique-gold-gradient);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(138, 101, 32, 0.2);
+}
+
+.capital-tier.tier-2 {
+  width: 52px;
+  height: 10px;
+  background: linear-gradient(180deg, #F5E8C9 0%, #D4AF37 100%);
+  border: 1px solid var(--color-antique-gold);
+}
+
+.capital-lotus {
+  width: 44px;
+  height: 14px;
+  background: radial-gradient(circle at 50% 100%, #DE7D99 0%, #F7B5C5 60%, #EBDCB9 100%);
+  border-radius: 0 0 50% 50%;
+  border: 1px solid rgba(197, 160, 89, 0.5);
+}
+
+.pillar-shaft {
+  flex: 1;
+  width: 36px;
+  background: linear-gradient(
+    90deg,
+    #FAF5EB 0%,
+    #FFFDF8 35%,
+    #F3EBDD 70%,
+    #E8D9BD 100%
+  );
+  border-left: 1.5px solid var(--color-antique-gold);
+  border-right: 1.5px solid var(--color-antique-gold-dark);
+  box-shadow: inset 0 0 10px rgba(197, 160, 89, 0.15), 4px 0 12px rgba(138, 101, 32, 0.08);
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.flute-line {
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(197, 160, 89, 0.4) 15%, rgba(197, 160, 89, 0.4) 85%, transparent 100%);
+}
+
+.pillar-hanging-marigold {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.floral-bead {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(74, 14, 23, 0.15);
+}
+
+.floral-bead.bead-pink {
+  background: radial-gradient(circle at 35% 35%, #FFE4EB 0%, #DE7D99 100%);
+  border: 1px solid rgba(222, 125, 153, 0.4);
+}
+
+.floral-bead.bead-white {
+  background: radial-gradient(circle at 35% 35%, #FFFFFF 0%, #EADBC8 100%);
+  border: 1px solid rgba(234, 219, 200, 0.6);
+}
+
+.floral-bell {
+  width: 14px;
+  height: 12px;
+  background: var(--color-antique-gold-gradient);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  border-bottom: 2px solid #8A6520;
+}
+
+.pillar-base {
+  width: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.base-tier.tier-lotus {
+  width: 46px;
+  height: 12px;
+  background: radial-gradient(circle at 50% 0%, #DE7D99 0%, #F7B5C5 50%, #C5A059 100%);
+  border-radius: 50% 50% 0 0;
+}
+
+.base-tier.tier-stone {
+  width: 60px;
+  height: 16px;
+  background: var(--color-antique-gold-gradient);
+  border-radius: 3px;
+  box-shadow: 0 -2px 6px rgba(138, 101, 32, 0.15);
+}
+
+/* ==========================================================================
+   Temple Sanctum Center Body
+   ========================================================================== */
+.temple-sanctum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.temple-finial-top {
+  width: 160px;
+  height: 70px;
+  margin-bottom: -15px;
+  z-index: 3;
+}
+
+.shikhara-kalash-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 8px rgba(138, 101, 32, 0.3));
+}
+
+.temple-arch-frame {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 248, 0.98) 0%,
+    rgba(251, 246, 238, 0.95) 50%,
+    rgba(255, 253, 248, 0.99) 100%
+  );
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: 120px 120px var(--radius-xl) var(--radius-xl);
+  box-shadow: 
+    var(--shadow-temple),
+    inset 0 0 35px rgba(197, 160, 89, 0.08);
+  padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+  overflow: hidden;
+}
+
+.arch-svg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sanctum-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Invitation Sacred Intro & Ribbon
+   ========================================================================== */
+.invitation-intro {
+  margin: var(--space-md) 0 var(--space-lg);
+  max-width: 600px;
+}
+
+.sacred-ribbon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.ribbon-line {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-antique-gold) 50%,
+    transparent 100%
+  );
+}
+
+.ribbon-badge {
+  color: var(--color-primary);
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(138, 101, 32, 0.1);
+}
+
+.intro-subtext {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.06em;
+  margin-top: var(--space-sm);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Couple Names Section
+   ========================================================================== */
+.couple-names-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin: var(--space-md) 0 var(--space-xl);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.couple-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  min-width: 200px;
+  box-shadow: 0 4px 14px rgba(74, 14, 23, 0.04);
+  transition: transform var(--transition-normal);
+}
+
+.couple-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-gold);
+}
+
+.couple-card .salutation {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-antique-gold-dark);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.couple-card .name-gu {
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.15;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.couple-card .name-en {
+  font-size: clamp(1rem, 2.8vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-antique-gold-dark);
+  margin-top: 4px;
+}
+
+/* Sacred Knot / Ampersand */
+.sacred-knot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 var(--space-xs);
+}
+
+.knot-flourish {
+  font-size: 1.2rem;
+  color: var(--color-antique-gold);
+}
+
+.sacred-knot .ampersand {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  color: var(--color-primary-light);
+  line-height: 0.85;
+  margin: var(--space-xs) 0;
+  filter: drop-shadow(0 2px 4px rgba(128, 0, 32, 0.15));
+}
+
+.hastamelap-badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  background: rgba(247, 181, 197, 0.25);
+  border: 1px solid rgba(222, 125, 153, 0.4);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Auspicious Wedding Date Plaque
+   ========================================================================== */
+.wedding-date-plaque {
+  position: relative;
+  background: linear-gradient(135deg, #FFFDF8 0%, #FAF5EB 100%);
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-xl);
+  margin: var(--space-md) auto var(--space-xl);
+  max-width: 520px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  box-shadow: 0 6px 20px rgba(138, 101, 32, 0.1);
+}
+
+.plaque-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--color-antique-gold);
+}
+
+.plaque-corner.top-left {
+  top: 4px;
+  left: 4px;
+  border-top: 2px solid var(--color-antique-gold);
+  border-left: 2px solid var(--color-antique-gold);
+}
+
+.plaque-corner.top-right {
+  top: 4px;
+  right: 4px;
+  border-top: 2px solid var(--color-antique-gold);
+  border-right: 2px solid var(--color-antique-gold);
+}
+
+.plaque-corner.bottom-left {
+  bottom: 4px;
+  left: 4px;
+  border-bottom: 2px solid var(--color-antique-gold);
+  border-left: 2px solid var(--color-antique-gold);
+}
+
+.plaque-corner.bottom-right {
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 2px solid var(--color-antique-gold);
+  border-right: 2px solid var(--color-antique-gold);
+}
+
+.date-icon-circle {
+  font-size: 1.8rem;
+  width: 52px;
+  height: 52px;
+  background: radial-gradient(circle, #FFF3D6 0%, #F5E8C9 100%);
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(138, 101, 32, 0.15);
+}
+
+.date-details {
+  text-align: left;
+  flex: 1;
+}
+
+.date-details .date-gu {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2px;
+}
+
+.date-details .date-en {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+.date-details .tithi-gu {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-antique-gold-dark);
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Open Invitation Button & Scroll Action
+   ========================================================================== */
+.open-invitation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.open-invitation-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: 14px 34px;
+  background: var(--color-antique-gold-gradient);
+  border: 2px solid #8A6520;
+  border-radius: var(--radius-full);
+  color: #2B1E16;
+  cursor: pointer;
+  box-shadow: 
+    0 4px 18px rgba(138, 101, 32, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.open-invitation-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 8px 26px rgba(138, 101, 32, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.open-invitation-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: goldShimmer 3.5s infinite;
+}
+
+.btn-icon-left {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.btn-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-text-content .btn-gu {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.04em;
+}
+
+.btn-text-content .btn-en {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #4A3515;
+  margin-top: 1px;
+}
+
+.btn-icon-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  animation: gentleFloat 2s ease-in-out infinite;
+}
+
+.open-hint {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Mobile-First)
+   ========================================================================== */
+@media (max-width: 860px) {
+  .temple-architecture-container {
+    grid-template-columns: 44px 1fr 44px;
+    gap: var(--space-xs);
+    padding: 0 var(--space-xs);
+  }
+
+  .pillar-capital,
+  .capital-tier.tier-1 {
+    width: 38px;
+  }
+  .capital-tier.tier-2 {
+    width: 32px;
+  }
+  .capital-lotus {
+    width: 28px;
+  }
+  .temple-pillar {
+    min-height: 480px;
+  }
+  .pillar-shaft {
+    width: 22px;
+  }
+  .pillar-base,
+  .base-tier.tier-stone {
+    width: 38px;
+  }
+  .base-tier.tier-lotus {
+    width: 30px;
+  }
+  .flute-line:nth-child(2) {
+    display: none;
+  }
+
+  .temple-arch-frame {
+    border-radius: 70px 70px var(--radius-lg) var(--radius-lg);
+    padding: var(--space-lg) var(--space-sm) var(--space-xl);
+  }
+
+  .couple-names-wrapper {
+    gap: var(--space-sm);
+  }
+  .couple-card {
+    min-width: 140px;
+    padding: var(--space-sm) var(--space-md);
+  }
+}
+
+@media (max-width: 580px) {
+  .temple-architecture-container {
+    grid-template-columns: 1fr;
+    padding: 0 var(--space-xs);
+  }
+
+  /* Pillars become elegant vertical side framing accents on compact mobile */
+  .temple-pillar {
+    display: none;
+  }
+
+  .temple-arch-frame {
+    border-radius: 50px 50px var(--radius-lg) var(--radius-lg);
+    padding: var(--space-lg) var(--space-xs) var(--space-lg);
+    margin: 0 var(--space-xs);
+  }
+
+  .couple-names-wrapper {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .couple-card {
+    width: 90%;
+    min-width: auto;
+    padding: var(--space-sm);
+  }
+
+  .sacred-knot {
+    padding: var(--space-xs) 0;
+  }
+  .sacred-knot .ampersand {
+    font-size: 2rem;
+  }
+
+  .wedding-date-plaque {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-md) var(--space-sm);
+    gap: var(--space-sm);
+  }
+
+  .date-details {
+    text-align: center;
+  }
+
+  .open-invitation-btn {
+    padding: 12px 22px;
+    gap: var(--space-sm);
+    width: 90%;
+  }
+
+  .btn-text-content .btn-gu {
+    font-size: 0.95rem;
+  }
+}

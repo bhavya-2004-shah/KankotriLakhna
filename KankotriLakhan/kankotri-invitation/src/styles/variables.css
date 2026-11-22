@@ -1,0 +1,131 @@
+:root {
+  /* ==========================================================================
+     Grand Indian Temple Palette: Ivory, Cream, Sandstone, Antique Gold & Florals
+     ========================================================================== */
+
+  /* Soft Ivory, Warm Cream & Sandstone Foundations */
+  --color-ivory: #FFFDF9;              /* Sacred Temple Ivory */
+  --color-cream: #FAF5EB;              /* Warm Palace Cream */
+  --color-cream-sandstone: #F3EBDD;    /* Carved Golden Sandstone Shade */
+  --color-sandstone-deep: #DDC8A5;     /* Sculpted Jali & Pillar Shadow */
+  --color-bg: var(--color-ivory);
+  --color-bg-alt: var(--color-cream);
+  --color-card-bg: rgba(255, 253, 249, 0.94);
+  --color-card-bg-solid: #FFFDF9;
+
+  /* Antique Gold, Sandstone Gold & Metallic Shimmer */
+  --color-antique-gold: #C5A059;       /* Aged Temple Gold */
+  --color-antique-gold-light: #EBDCB9; /* Gold Leaf Shimmer */
+  --color-antique-gold-dark: #8A6520;  /* Deep Cast Bronze / Bell Gold */
+  --color-gold: #D4AF37;               /* Regal Temple Gold */
+  --color-gold-light: #F7E7A9;         /* Warm Golden Highlight */
+  --color-gold-dark: #996515;          /* Antique Border Filigree */
+  --color-card-border: rgba(197, 160, 89, 0.45);
+
+  --color-gold-gradient: linear-gradient(
+    135deg,
+    #B38728 0%,
+    #FBF5B7 28%,
+    #DAA520 55%,
+    #AA771C 80%,
+    #F7E7A9 100%
+  );
+
+  --color-antique-gold-gradient: linear-gradient(
+    135deg,
+    #9B7829 0%,
+    #DFCE9F 30%,
+    #C5A059 60%,
+    #84621E 100%
+  );
+
+  --color-sandstone-gradient: linear-gradient(
+    180deg,
+    #FAF5EB 0%,
+    #F3EBDD 50%,
+    #E8DCBE 100%
+  );
+
+  /* Auspicious Accents & Flag */
+  --color-primary: #800020;            /* Royal Maroon / Kumkum */
+  --color-primary-dark: #4A0E17;       /* Deep Crimson Shadow */
+  --color-primary-light: #A31D36;      /* Auspicious Kumkum Red */
+  --color-accent: #C41E3A;             /* Sacred Sindoor Red */
+  --color-saffron-flag: #FF7700;       /* Temple Spire Saffron Flag */
+  --color-saffron-glow: #FFA040;       /* Saffron Flag Glow */
+  --color-turmeric-yellow: #FFC000;    /* Haldi Pure Turmeric */
+  --color-marigold-orange: #FF7F00;    /* Marigold Flower */
+
+  /* Pink and White Floral Palette */
+  --color-floral-pink: #F7B5C5;        /* Soft Lotus / Rose Blush Pink */
+  --color-floral-pink-deep: #DE7D99;   /* Royal Gulabi Rose */
+  --color-floral-pink-light: #FFF0F4;  /* Ethereal Petal Mist */
+  --color-floral-white: #FFFFFF;       /* Mogra / Jasmine Pure White */
+  --color-floral-cream: #FFF9F0;       /* Champa Petal Ivory */
+  --color-floral-green: #6C8A65;       /* Mango & Ashoka Leaves */
+  --color-floral-green-dark: #3F5739;  /* Deep Sacred Foliage */
+
+  /* Peacock Ornamental Accent Colors */
+  --color-peacock-teal: #1F6B75;       /* Royal Indian Peacock Teal */
+  --color-peacock-blue: #0F4C81;       /* Auspicious Mayur Blue */
+  --color-peacock-gold: #C29B38;       /* Feather Crown Gold */
+
+  /* Deep Maroon & Warm Brown Typography */
+  --color-text-maroon: #800020;        /* Deep Maroon Heading */
+  --color-text-maroon-dark: #4A0E17;   /* Ultra Deep Maroon */
+  --color-text-primary: #331A1E;       /* Deep Maroon Brown Body */
+  --color-text-secondary: #5D3A3F;     /* Muted Maroon-Brown Supporting Text */
+  --color-text-muted: #7E5F5A;         /* Timestamps & Labels */
+  --color-text-gold: #9B7829;          /* Antique Gold Callout */
+
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+  --font-heading: 'Rozha One', 'Cinzel', serif;
+  --font-serif: 'Cinzel', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-gujarati: 'Noto Serif Gujarati', 'Noto Sans Gujarati', serif;
+  --font-body: 'Cinzel', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, serif;
+
+  /* ==========================================================================
+     Spacing & Layout Sizing
+     ========================================================================== */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.25rem;
+  --space-2xl: 3.5rem;
+  --space-3xl: 5rem;
+  --space-4xl: 7rem;
+
+  --max-content-width: 1040px;
+  --max-card-width: 780px;
+  --pathway-width: min(100%, 720px);
+
+  /* ==========================================================================
+     Decorative Radii & Shadows
+     ========================================================================== */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-arch: 140px 140px 16px 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(74, 14, 23, 0.05);
+  --shadow-md: 0 8px 24px rgba(74, 14, 23, 0.08);
+  --shadow-lg: 0 16px 40px rgba(74, 14, 23, 0.12);
+  --shadow-gold: 0 0 24px rgba(197, 160, 89, 0.35);
+  --shadow-temple: 0 16px 48px rgba(138, 101, 32, 0.16);
+  --shadow-maroon: 0 12px 36px rgba(128, 0, 32, 0.14);
+
+  /* ==========================================================================
+     Transitions
+     ========================================================================== */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}

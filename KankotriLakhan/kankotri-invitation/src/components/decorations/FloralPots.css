@@ -1,0 +1,30 @@
+/* ==========================================================================
+   FloralPots Styles
+   ========================================================================== */
+
+.floral-pot-root {
+  display: inline-block;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(138, 101, 32, 0.22));
+}
+
+.floral-pot-svg {
+  width: 90px;
+  height: auto;
+  max-height: 120px;
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .floral-pot-svg {
+    width: 65px;
+    max-height: 85px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floral-pot-svg {
+    width: 50px;
+    max-height: 65px;
+  }
+}

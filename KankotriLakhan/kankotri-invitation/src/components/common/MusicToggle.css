@@ -1,0 +1,135 @@
+/* ==========================================================================
+   MusicToggle Component Styles - Antique Gold Medallion
+   ========================================================================== */
+
+.music-toggle-container {
+  position: fixed;
+  top: max(16px, env(safe-area-inset-top, 16px));
+  right: max(16px, env(safe-area-inset-right, 16px));
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.music-toggle-btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-antique-gold);
+  background: linear-gradient(135deg, #FFFDF8 0%, #F5ECDC 50%, #E6D2B5 100%);
+  box-shadow: 0 4px 16px rgba(138, 101, 32, 0.28), 0 0 12px rgba(212, 175, 55, 0.35);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+}
+
+.music-toggle-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(138, 101, 32, 0.4), 0 0 16px rgba(212, 175, 55, 0.5);
+}
+
+.music-toggle-btn:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.toggle-halo {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px dashed rgba(197, 160, 89, 0.6);
+  pointer-events: none;
+}
+
+.music-toggle-btn.is-playing .toggle-halo {
+  animation: rotateHalo 12s linear infinite;
+}
+
+@keyframes rotateHalo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toggle-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-antique-gold-dark);
+  font-size: 1.15rem;
+}
+
+/* Equalizer audio waves when playing */
+.audio-wave-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 18px;
+  padding-bottom: 1px;
+}
+
+.wave-bar {
+  width: 3px;
+  background: var(--color-antique-gold-dark);
+  border-radius: 2px;
+  animation: waveBarBounce 1s ease-in-out infinite alternate;
+}
+
+.wave-bar.bar-1 {
+  height: 8px;
+  animation-delay: 0s;
+}
+
+.wave-bar.bar-2 {
+  height: 16px;
+  animation-delay: 0.25s;
+}
+
+.wave-bar.bar-3 {
+  height: 12px;
+  animation-delay: 0.15s;
+}
+
+.wave-bar.bar-4 {
+  height: 7px;
+  animation-delay: 0.35s;
+}
+
+@keyframes waveBarBounce {
+  0% {
+    height: 4px;
+  }
+  100% {
+    height: 18px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: 480px) {
+  .music-toggle-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .toggle-inner {
+    font-size: 1rem;
+  }
+}

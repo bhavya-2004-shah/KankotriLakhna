@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Floating Petals Overlay & Keyframe Styling
+   ========================================================================== */
+.floating-petals-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 15;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  border-radius: 50% 50% 50% 0;
+  opacity: 0;
+  animation: petalFall linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(128, 0, 32, 0.08));
+}
+
+.petal.petal-white {
+  background: radial-gradient(circle at 35% 35%, #FFFFFF 0%, #FFF5EC 70%, #F5E6D3 100%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.petal.petal-pink {
+  background: radial-gradient(circle at 30% 30%, #FFE4EB 0%, #F8B4C4 65%, #EAA2B4 100%);
+  border: 1px solid rgba(248, 180, 196, 0.4);
+}
+
+.petal.petal-pink-deep {
+  background: radial-gradient(circle at 30% 30%, #FCA6BC 0%, #DE7D99 70%, #C95C7A 100%);
+  border: 1px solid rgba(222, 125, 153, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-petals-overlay {
+    display: none;
+  }
+}

@@ -1,0 +1,108 @@
+/* ==========================================================================
+   AudioPlayer Floating Control Styles
+   ========================================================================== */
+.audio-player-fixed {
+  position: fixed;
+  top: var(--space-md);
+  right: var(--space-md);
+  z-index: 50;
+}
+
+.audio-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #FFFDF8 0%, #FAF5EB 100%);
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(138, 101, 32, 0.2);
+  transition: all var(--transition-normal);
+  color: var(--color-primary);
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.audio-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(138, 101, 32, 0.35);
+  border-color: var(--color-gold);
+}
+
+.audio-toggle-btn.is-playing {
+  border-color: var(--color-gold);
+  background: linear-gradient(135deg, #FFF8E7 0%, #F5E8C9 100%);
+}
+
+.btn-glow-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  transition: opacity 0.3s ease;
+}
+
+.audio-toggle-btn.is-playing .btn-glow-ring {
+  opacity: 1;
+  animation: royalPulse 3s infinite;
+}
+
+.audio-icon-box {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-antique-gold-dark);
+}
+
+.music-svg {
+  width: 17px;
+  height: 17px;
+  color: var(--color-primary);
+}
+
+.audio-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+/* Sound Wave Equalizer animation */
+.soundwave-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 16px;
+}
+
+.soundwave-bars .bar {
+  width: 2.5px;
+  background: var(--color-primary);
+  border-radius: 1px;
+  animation: soundWave 1.2s ease-in-out infinite;
+}
+
+.soundwave-bars .bar-1 { animation-delay: 0.1s; height: 8px; }
+.soundwave-bars .bar-2 { animation-delay: 0.3s; height: 14px; }
+.soundwave-bars .bar-3 { animation-delay: 0.2s; height: 10px; }
+.soundwave-bars .bar-4 { animation-delay: 0.4s; height: 6px; }
+
+@media (max-width: 640px) {
+  .audio-player-fixed {
+    top: var(--space-sm);
+    right: var(--space-sm);
+  }
+  .audio-toggle-btn {
+    padding: 6px 12px;
+  }
+  .audio-label {
+    display: none;
+  }
+}

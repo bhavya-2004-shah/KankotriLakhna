@@ -1,0 +1,49 @@
+/* ==========================================================================
+   HangingBells Styles
+   ========================================================================== */
+
+.hanging-bells-root {
+  display: inline-block;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(138, 101, 32, 0.25));
+}
+
+.hanging-bell-svg {
+  width: 44px;
+  height: 140px;
+  overflow: visible;
+}
+
+.bell-pendulum-assembly {
+  transform-origin: 22px 6px;
+  animation: bellSway 4.2s ease-in-out infinite alternate;
+}
+
+.bell-right .bell-pendulum-assembly {
+  animation-delay: -2.1s;
+}
+
+@keyframes bellSway {
+  0% {
+    transform: rotate(-4.5deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3.5deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bell-pendulum-assembly {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hanging-bell-svg {
+    width: 32px;
+    height: 105px;
+  }
+}

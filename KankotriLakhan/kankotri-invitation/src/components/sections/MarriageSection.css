@@ -1,0 +1,254 @@
+/* ==========================================================================
+   MarriageSection Styles - Grand Wedding Mandap & Hastamelap
+   ========================================================================== */
+
+.marriage-scene-card {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-card-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 250, 247, 0.96) 0%,
+    rgba(250, 240, 244, 0.98) 50%,
+    rgba(255, 250, 247, 0.96) 100%
+  );
+  border: 1.5px solid rgba(197, 160, 89, 0.6);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+  box-shadow: 0 16px 44px rgba(128, 0, 32, 0.14), 0 0 28px rgba(212, 175, 55, 0.18);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.marriage-scene-card::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px dashed rgba(163, 29, 54, 0.35);
+  border-radius: calc(var(--radius-xl) - 4px);
+  pointer-events: none;
+}
+
+/* Mangalashtak Seal */
+.mangalashtak-seal {
+  display: inline-block;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-maroon);
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFFDF8 0%, #F5ECDC 100%);
+  border: 1px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  padding: 4px 18px;
+  margin-bottom: var(--space-sm);
+  box-shadow: 0 2px 8px rgba(138, 101, 32, 0.1);
+  z-index: 2;
+}
+
+/* Mandap Art */
+.marriage-mandap-art {
+  width: 100%;
+  max-width: 260px;
+  margin: var(--space-xs) auto var(--space-md);
+  z-index: 2;
+}
+
+.mandap-svg-art {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.sacred-flames {
+  transform-origin: 100px 64px;
+  animation: flameFlicker 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes flameFlicker {
+  0% { transform: scale(0.96) rotate(-1deg); }
+  50% { transform: scale(1.04) rotate(1.5deg); }
+  100% { transform: scale(0.98) rotate(-0.5deg); }
+}
+
+/* Headings */
+.marriage-main-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-text-maroon);
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+  z-index: 2;
+}
+
+.marriage-sub-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-antique-gold-dark);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  z-index: 2;
+}
+
+.marriage-theme-note {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  margin: 0 auto var(--space-lg);
+  line-height: 1.6;
+  z-index: 2;
+}
+
+/* Saptapadi 7 Steps Banner */
+.saptapadi-track-container {
+  width: 100%;
+  max-width: 660px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-xl);
+  box-shadow: 0 4px 14px rgba(74, 14, 23, 0.06);
+  z-index: 2;
+}
+
+.saptapadi-track-title {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-maroon);
+  margin-bottom: var(--space-sm);
+}
+
+.saptapadi-steps-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.saptapadi-step-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #FFFDF8 0%, #F5ECDC 100%);
+  border: 1px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.step-num {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-text-maroon);
+  color: #FFFDF8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Details Grid */
+.marriage-details-grid {
+  width: 100%;
+  max-width: 660px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin: 0 auto var(--space-xl);
+  z-index: 2;
+}
+
+.marriage-detail-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.marriage-detail-card.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Map Action */
+.marriage-map-action {
+  z-index: 2;
+}
+
+.btn-marriage-map {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #800020 0%, #A31D36 50%, #4A0E17 100%);
+  border: 1.5px solid var(--color-gold);
+  border-radius: var(--radius-full);
+  color: #FFFDF9;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(128, 0, 32, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-marriage-map:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(128, 0, 32, 0.45), 0 0 16px rgba(212, 175, 55, 0.5);
+  border-color: #FFF2A3;
+}
+
+.btn-marriage-map:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .marriage-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .marriage-scene-card {
+    padding: var(--space-lg) var(--space-sm) var(--space-xl);
+  }
+
+  .saptapadi-steps-row {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .marriage-scene-card {
+    padding: var(--space-md) 6px var(--space-lg);
+  }
+
+  .marriage-main-title {
+    font-size: 1.55rem;
+  }
+
+  .btn-marriage-map {
+    padding: 10px 18px;
+    font-size: 0.82rem;
+  }
+}

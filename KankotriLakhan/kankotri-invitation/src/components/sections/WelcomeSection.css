@@ -1,0 +1,446 @@
+/* ==========================================================================
+   WelcomeSection Styles - Grand Indian Temple Entrance
+   ========================================================================== */
+
+.welcome-scene-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.welcome-spire-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: var(--space-sm);
+  z-index: 8;
+}
+
+/* Flanking Hanging Bells */
+.welcome-bells-flank {
+  position: absolute;
+  top: 120px;
+  z-index: 12;
+  pointer-events: none;
+}
+
+.welcome-bells-flank.left-bell {
+  left: 20px;
+}
+
+.welcome-bells-flank.right-bell {
+  right: 20px;
+}
+
+/* Main Temple Sanctum Frame */
+.welcome-temple-sanctum {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-card-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 249, 0.96) 0%,
+    rgba(250, 245, 235, 0.98) 50%,
+    rgba(255, 253, 249, 0.96) 100%
+  );
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: var(--radius-arch);
+  padding: var(--space-2xl) var(--space-lg) var(--space-xl);
+  box-shadow: var(--shadow-temple), 0 0 32px rgba(212, 175, 55, 0.15);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Inner decorative filigree border */
+.welcome-temple-sanctum::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px dashed rgba(197, 160, 89, 0.45);
+  border-radius: calc(140px - 6px) calc(140px - 6px) 12px 12px;
+  pointer-events: none;
+}
+
+/* Ganesh Block */
+.welcome-ganesh-block {
+  width: 100%;
+  margin-bottom: var(--space-md);
+  z-index: 2;
+}
+
+/* Announcement */
+.welcome-announcement {
+  max-width: 620px;
+  margin: 0 auto var(--space-lg);
+  padding: 0 var(--space-sm);
+  z-index: 2;
+}
+
+.welcome-kuldevi-line {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-maroon);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+}
+
+.welcome-invite-subtext {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* Couple Names Stage with Flanking Peacocks */
+.couple-names-stage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-xl);
+  z-index: 2;
+}
+
+.stage-peacock {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.couple-names-container {
+  flex: 1;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.couple-name-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.honorific-prefix {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--color-antique-gold-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.couple-first-name {
+  font-size: clamp(2.8rem, 8vw, 4.2rem);
+  line-height: 1.15;
+  color: var(--color-text-maroon);
+  font-weight: 400;
+  margin: 2px 0 6px;
+  text-shadow: 0 2px 8px rgba(128, 0, 32, 0.1);
+  letter-spacing: 0.02em;
+}
+
+.couple-family-sub {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.couple-lineage-sub {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+/* Wedding Knot Divider */
+.wedding-knot-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin: 4px 0;
+}
+
+.knot-flourish {
+  color: var(--color-antique-gold);
+  font-size: 1.1rem;
+}
+
+.knot-symbol {
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--color-antique-gold-dark);
+  margin: 0 4px;
+}
+
+.knot-caption {
+  display: none;
+}
+
+/* Wedding Date Banner */
+.wedding-date-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: linear-gradient(135deg, #FFFDF8 0%, #F5ECDC 100%);
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: var(--radius-full);
+  padding: 8px 24px;
+  margin: var(--space-md) auto var(--space-lg);
+  box-shadow: 0 4px 16px rgba(138, 101, 32, 0.15);
+  z-index: 2;
+}
+
+.banner-diya {
+  font-size: 1.15rem;
+}
+
+.banner-date {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-maroon);
+  letter-spacing: 0.04em;
+}
+
+.banner-sep {
+  color: var(--color-antique-gold);
+}
+
+.banner-tithi {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+/* Base Floral Pots */
+.welcome-base-pots {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: -10px 0 var(--space-lg);
+  padding: 0 var(--space-md);
+  z-index: 2;
+}
+
+/* Open Invitation CTA */
+.open-invitation-action {
+  margin: var(--space-md) 0 var(--space-lg);
+  z-index: 5;
+}
+
+.btn-open-invitation {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: 14px 34px;
+  background: linear-gradient(135deg, #800020 0%, #A31D36 50%, #4A0E17 100%);
+  color: #FFFDF9;
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(128, 0, 32, 0.35), 0 0 16px rgba(212, 175, 55, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.btn-open-invitation:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 36px rgba(128, 0, 32, 0.45), 0 0 24px rgba(212, 175, 55, 0.6);
+  border-color: #FFF2A3;
+}
+
+.btn-open-invitation:active {
+  transform: translateY(1px);
+}
+
+.btn-open-invitation:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+.btn-lotus-icon {
+  font-size: 1.4rem;
+}
+
+.btn-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.btn-primary-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.btn-sub-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #F7E7A9;
+}
+
+.btn-down-arrow {
+  font-size: 1.2rem;
+  animation: bounceDown 1.8s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* Subtle Scroll Indicator */
+.subtle-scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-sm);
+  opacity: 0.75;
+}
+
+.indicator-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-antique-gold-dark);
+  font-weight: 600;
+}
+
+.mouse-wheel-track {
+  width: 18px;
+  height: 28px;
+  border: 1.5px solid var(--color-antique-gold);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.mouse-wheel-dot {
+  width: 3.5px;
+  height: 6px;
+  background-color: var(--color-antique-gold-dark);
+  border-radius: 2px;
+  animation: wheelScroll 1.6s ease-in-out infinite;
+}
+
+@keyframes wheelScroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .welcome-bells-flank {
+    display: none;
+  }
+
+  .stage-peacock {
+    display: none;
+  }
+
+  .welcome-temple-sanctum {
+    padding: var(--space-xl) var(--space-md) var(--space-lg);
+    border-radius: 90px 90px 12px 12px;
+  }
+
+  .welcome-temple-sanctum::before {
+    border-radius: calc(90px - 6px) calc(90px - 6px) 10px 10px;
+  }
+
+  .wedding-date-banner {
+    padding: 6px 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 8px;
+  }
+
+  .banner-date, .banner-tithi {
+    font-size: 0.82rem;
+  }
+
+  .btn-open-invitation {
+    padding: 12px 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .couple-first-name {
+    font-size: 2.5rem;
+  }
+
+  .welcome-temple-sanctum {
+    border-radius: 70px 70px 10px 10px;
+    padding: var(--space-lg) var(--space-xs) var(--space-md);
+  }
+
+  .welcome-temple-sanctum::before {
+    border-radius: calc(70px - 6px) calc(70px - 6px) 8px 8px;
+  }
+
+  .welcome-base-pots {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .welcome-temple-sanctum {
+    border-radius: 50px 50px 8px 8px;
+    padding: var(--space-md) 6px var(--space-sm);
+  }
+
+  .welcome-temple-sanctum::before {
+    border-radius: calc(50px - 4px) calc(50px - 4px) 6px 6px;
+    inset: 5px;
+  }
+
+  .couple-first-name {
+    font-size: 2.1rem;
+  }
+
+  .btn-open-invitation {
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .btn-primary-text {
+    font-size: 0.92rem;
+  }
+
+  .btn-sub-text {
+    font-size: 0.68rem;
+  }
+}

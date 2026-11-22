@@ -1,0 +1,35 @@
+/* ==========================================================================
+   PeacockMotif Styles
+   ========================================================================== */
+
+.peacock-motif-root {
+  display: inline-block;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 12px rgba(138, 101, 32, 0.22));
+  transition: transform 0.4s ease;
+}
+
+.peacock-flipped {
+  transform: scaleX(-1);
+}
+
+.peacock-svg {
+  width: 110px;
+  height: auto;
+  max-height: 130px;
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .peacock-svg {
+    width: 75px;
+    max-height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .peacock-svg {
+    width: 58px;
+    max-height: 70px;
+  }
+}
