@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { SectionContainer } from '../../layout/SectionContainer';
 import { WelcomeHero } from '../sections/WelcomeHero';
 import { FormalInvitationSection } from '../sections/FormalInvitationSection';
-import { HaldiSection } from '../sections/HaldiSection';
+import { EventsFlapSection } from '../sections/EventsFlapSection';
 import { MarriageSection } from '../sections/MarriageSection';
 import { ClosingSection } from '../sections/ClosingSection';
 import { useGSAPAnimations } from '../../hooks/useGSAPAnimations';
@@ -35,12 +35,10 @@ export const ContinuousPathway = ({ invitationData, isEnvelopeOpen }) => {
   } = invitationData || {};
 
   const pathwayRootRef = useRef(null);
-  const haldiRef = useRef(null);
 
   // Initialize GSAP scroll animations scoped to this continuous container
   useGSAPAnimations(pathwayRootRef);
 
-  const haldiEvent = events?.haldi || (Array.isArray(events) ? events.find((e) => e.id === 'haldi') : null) || {};
   const marriageEvent = events?.marriage || (Array.isArray(events) ? events.find((e) => e.id === 'hastamelap' || e.id === 'marriage') : null) || {};
 
   useEffect(() => {
@@ -111,21 +109,7 @@ export const ContinuousPathway = ({ invitationData, isEnvelopeOpen }) => {
 
       <FormalInvitationSection />
 
-      {/* ====================================================================
-          MILESTONE 2: Haldi Samarambh (Pithi Ceremony)
-          Warm Turmeric Amber, Saffron Sunlight & Marigold Petals
-          ==================================================================== */}
-      <SectionContainer
-        id="haldi-milestone"
-        ref={haldiRef}
-        variant="haldi"
-        milestoneNumber="2"
-        milestoneTitle="Haldi Ceremony"
-        bridgeType="haldi-to-marriage"
-        bridgeIcon="🔥"
-      >
-        <HaldiSection haldiData={haldiEvent} />
-      </SectionContainer>
+      <EventsFlapSection />
 
       {/* ====================================================================
           MILESTONE 3: Marriage Ceremony (Shubh Vivah & Saptapadi)

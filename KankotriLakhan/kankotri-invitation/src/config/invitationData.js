@@ -224,4 +224,24 @@ export const formalInvitationConfig = {
   },
 };
 
+export const eventsFlapConfig = {
+  sectionBackdrop: '/assets/events/events-section-bg.png',
+  events: [
+    {
+      id: 'twilight-beats-and-bliss',
+      eyebrow: 'Sangeet & Celebration',
+      title: 'Twilight Beats and Bliss',
+      subtitle: 'An evening of rhythm, lights, and joyful togetherness',
+      frameImage: '/assets/events/twilight-flap-card.png',
+      date: '13th February 2027',
+      time: '7:00 PM Onwards',
+      venue: 'Royal Courtyard Lawn',
+      address: 'Amrit Mahal Palace, Jal Marg, Old City, Jaipur',
+      dressCode: 'Indo-Western / Twilight Glam',
+      mapUrl: 'https://maps.google.com/?q=Amrit+Mahal+Palace+Jaipur',
+      mapLabel: 'VIEW ON MAP',
+    },
+  ],
+};
+
 export default invitationData;
