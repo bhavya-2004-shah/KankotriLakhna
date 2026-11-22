@@ -5,6 +5,7 @@ import './EventFlapCard.css';
 export const EventFlapCard = ({ event, index = 0 }) => {
   const wrapperRef = useRef(null);
   const cardRef = useRef(null);
+  const isRightSide = event?.side === 'right' || index % 2 === 1;
 
   useEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -19,12 +20,12 @@ export const EventFlapCard = ({ event, index = 0 }) => {
       gsap.fromTo(
         cardRef.current,
         {
-          rotateY: -112,
+          rotateY: isRightSide ? 112 : -112,
           rotateZ: -1.5,
           opacity: 0,
-          x: 18,
+          x: isRightSide ? -18 : 18,
           y: 8,
-          transformOrigin: '12% center',
+          transformOrigin: isRightSide ? '88% center' : '12% center',
         },
         {
           rotateY: 0,
@@ -46,7 +47,7 @@ export const EventFlapCard = ({ event, index = 0 }) => {
 
       gsap.fromTo(
         cardRef.current?.querySelectorAll('.event-flap-card__item') || [],
-        { opacity: 0, x: 22, y: 4 },
+        { opacity: 0, x: isRightSide ? -22 : 22, y: 4 },
         {
           opacity: 1,
           x: 0,
@@ -68,13 +69,13 @@ export const EventFlapCard = ({ event, index = 0 }) => {
     }, wrapperRef);
 
     return () => context.revert();
-  }, [event?.id]);
+  }, [event?.id, isRightSide]);
 
   if (!event) return null;
 
   return (
     <article
-      className="event-flap-wrapper"
+      className={`event-flap-wrapper ${isRightSide ? 'event-flap-wrapper--right' : 'event-flap-wrapper--left'}`}
       ref={wrapperRef}
       aria-label={event.title}
       data-event-index={index}

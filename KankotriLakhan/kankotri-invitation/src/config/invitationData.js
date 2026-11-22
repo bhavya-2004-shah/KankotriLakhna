@@ -241,6 +241,21 @@ export const eventsFlapConfig = {
       mapUrl: 'https://maps.google.com/?q=Amrit+Mahal+Palace+Jaipur',
       mapLabel: 'VIEW ON MAP',
     },
+    {
+      id: 'sacred-wedding-ceremony',
+      eyebrow: 'Shubh Vivah & Saptapadi',
+      title: 'Sacred Wedding Ceremony',
+      subtitle: 'The sacred vows that unite two hearts forever',
+      frameImage: '/assets/events/twilight-flap-card.png',
+      side: 'right',
+      date: '18th December 2026',
+      time: '10:29 AM Onwards',
+      venue: 'The Grand Mandap, The Royal Palace & Resort',
+      address: 'S.G. Highway, Near Iscon Cross Roads, Ahmedabad, Gujarat - 380058',
+      dressCode: 'Royal Traditional Indian Attire',
+      mapUrl: 'https://maps.google.com/?q=The+Royal+Palace+Resort+Ahmedabad',
+      mapLabel: 'VIEW ON MAP',
+    },
   ],
 };
 

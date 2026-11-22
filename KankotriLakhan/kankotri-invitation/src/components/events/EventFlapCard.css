@@ -5,6 +5,20 @@
   text-align: left;
 }
 
+.event-flap-wrapper--right {
+  text-align: right;
+}
+
+.event-flap-wrapper--right .event-flap-card {
+  margin-right: clamp(0px, 4vw, 48px);
+  margin-left: auto;
+  transform-origin: 88% center;
+}
+
+.event-flap-wrapper--left .event-flap-card {
+  transform-origin: 12% center;
+}
+
 .event-flap-card {
   position: relative;
   width: min(100%, 500px);
