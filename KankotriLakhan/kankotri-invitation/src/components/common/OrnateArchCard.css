@@ -29,8 +29,19 @@
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .ornate-arch-card {
+    width: min(100%, 520px);
+  }
+
+  .ornate-arch-card__content {
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 375px) {
   .ornate-arch-card {
     min-height: 620px;
+    aspect-ratio: auto;
   }
 }

@@ -22,8 +22,31 @@ body {
   background-color: var(--color-bg);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
   background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+img,
+picture {
+  display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+span {
+  overflow-wrap: break-word;
 }
 
 /* ==========================================================================
@@ -128,4 +151,24 @@ body {
   border: 1px dashed var(--color-card-border);
   text-align: center;
   margin: var(--space-md) 0;
+}
+
+@media (max-width: 767px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container,
+  .section-padding,
+  .kankotri-card {
+    max-width: 100%;
+  }
+
+  .kankotri-card {
+    padding: clamp(16px, 5vw, 24px);
+  }
 }

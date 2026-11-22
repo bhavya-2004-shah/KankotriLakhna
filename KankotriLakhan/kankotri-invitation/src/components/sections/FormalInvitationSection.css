@@ -183,5 +183,11 @@
 @media (max-width: 375px) {
   .formal-invitation { padding-inline: 8px; }
   .formal-invitation__arch { width: calc(100% - 8px); }
-  .formal-invitation__arch .ornate-arch-card__content { padding: 20% 14% 13% !important; }
+  .formal-invitation__arch .ornate-arch-card__content { padding: 15% 10% 10% !important; }
+  .formal-invitation__ganesh { width: 30px; height: 30px; }
+  .formal-invitation__shloka { font-size: 0.52rem; }
+  .formal-invitation__blessing { font-size: 0.62rem; }
+  .formal-invitation__invite { font-size: 0.54rem; }
+  .formal-invitation__person h2 { font-size: 1.65rem; }
+  .formal-invitation__person p { font-size: 0.46rem; }
 }

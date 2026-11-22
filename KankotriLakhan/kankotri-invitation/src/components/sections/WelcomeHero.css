@@ -212,8 +212,24 @@
 .welcome-hero__chevron:focus-visible { outline: 3px solid #fff3bf; outline-offset: 4px; }
 
 @media (max-width: 767px) {
-  .welcome-hero-couple { flex-direction: column; gap: 0; }
-  .welcome-hero-couple h1 { font-size: clamp(3.8rem, 17vw, 5.8rem); }
-  .welcome-hero-ampersand { height: 0.7em; line-height: 0.55; }
-  .welcome-hero-content { width: 94%; }
+  .welcome-hero-couple,
+  .welcome-hero__couple { flex-direction: column; gap: 0; }
+  .welcome-hero-couple h1,
+  .welcome-hero__couple h1 { font-size: clamp(3rem, 15vw, 5.2rem); }
+  .welcome-hero-ampersand,
+  .welcome-hero__ampersand { height: 0.7em; line-height: 0.55; }
+  .welcome-hero-content,
+  .welcome-hero__content { width: 92%; padding: 16px 12px; }
+  .welcome-hero-eyebrow,
+  .welcome-hero__eyebrow { margin-top: clamp(10px, 2.5vh, 24px); }
+  .welcome-hero-save,
+  .welcome-hero__cta { margin-top: clamp(12px, 3vh, 24px); }
+}
+
+@media (max-width: 375px), (max-height: 700px) {
+  .welcome-hero__invocation { font-size: 0.68rem; }
+  .welcome-hero__couple h1 { font-size: clamp(2.7rem, 14vw, 4.2rem); }
+  .welcome-hero__eyebrow { letter-spacing: 0.16em; }
+  .welcome-hero__date { font-size: 0.82rem; }
+  .welcome-hero__cta { padding-inline: 20px; font-size: 0.68rem; }
 }
